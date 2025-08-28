@@ -61,10 +61,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header 
-          cartItemCount={cartItemCount} 
-          toggleCart={toggleCart} 
-        />
+        <Header cartItemCount={cartItemCount} toggleCart={toggleCart} />
         
         <Routes>
           <Route 
