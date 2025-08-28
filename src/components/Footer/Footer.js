@@ -11,10 +11,10 @@ const Footer = () => {
             <h3>StyleSneak</h3>
             <p>Premium footwear for every occasion. Step into style with our curated collection of sneakers.</p>
             <div className="social-icons">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest-p"></i></a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-pinterest-p"></i></a>
             </div>
           </div>
           
@@ -31,10 +31,10 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Customer Service</h3>
             <ul>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Shipping Policy</a></li>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Returns & Exchanges</a></li>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Size Guide</a></li>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">FAQs</a></li>
+              <li><Link to="/shipping-policy">Shipping Policy</Link></li>
+              <li><Link to="/returns">Returns & Exchanges</Link></li>
+              <li><Link to="/size-guide">Size Guide</Link></li>
+              <li><Link to="/faqs">FAQs</Link></li>
             </ul>
           </div>
           
