@@ -1,0 +1,153 @@
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 60px 0 20px;
+  margin-top: 60px;
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-section {
+    h3 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #ecf0f1;
+    }
+
+    p {
+      color: #bdc3c7;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: #bdc3c7;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #6a11cb;
+          }
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        background: #6a11cb;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .contact-info {
+    p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+
+      i {
+        margin-right: 10px;
+        color: #6a11cb;
+        width: 20px;
+      }
+    }
+  }
+
+  .newsletter-form {
+    display: flex;
+    margin-top: 15px;
+
+    input {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+
+    button {
+      padding: 12px 20px;
+      background: #6a11cb;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #5a0fb8;
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #3e546b;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    p {
+      color: #bdc3c7;
+      margin: 0;
+    }
+  }
+
+  .payment-methods {
+    display: flex;
+    gap: 15px;
+
+    i {
+      font-size: 24px;
+      color: #bdc3c7;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #6a11cb;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

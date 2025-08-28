@@ -1,0 +1,233 @@
+.cart-modal {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transition: right 0.3s ease;
+
+  &.open {
+    right: 0;
+
+    .cart-overlay {
+      opacity: 1;
+    }
+
+    .cart-content {
+      transform: translateX(0);
+    }
+  }
+
+  .cart-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .cart-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+  }
+
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .close-cart {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #7f8c8d;
+    }
+  }
+
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+
+    .empty-cart {
+      text-align: center;
+      padding: 40px 0;
+
+      i {
+        font-size: 48px;
+        color: #bdc3c7;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #7f8c8d;
+        margin-bottom: 20px;
+      }
+
+      .continue-shopping {
+        padding: 10px 20px;
+        background: #6a11cb;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cart-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .cart-item-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .cart-item-details {
+      flex: 1;
+      padding: 0 15px;
+
+      .cart-item-title {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .cart-item-variants {
+        color: #7f8c8d;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .cart-item-price {
+        color: #6a11cb;
+        font-weight: 700;
+      }
+    }
+
+    .cart-item-controls {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .quantity-controls {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+        button {
+          width: 30px;
+          height: 30px;
+          background: #f8f9fa;
+          border: none;
+          cursor: pointer;
+
+          &:hover {
+            background: #e9ecef;
+          }
+        }
+
+        span {
+          width: 30px;
+          text-align: center;
+        }
+      }
+
+      .cart-item-remove {
+        color: #ff4757;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+
+        &:hover {
+          color: #ff3742;
+        }
+      }
+    }
+  }
+
+  .cart-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 15px;
+      background: #6a11cb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #5a0fb8;
+      }
+    }
+
+    .continue-shopping {
+      width: 100%;
+      padding: 10px;
+      background: none;
+      border: 1px solid #6a11cb;
+      color: #6a11cb;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background: #6a11cb;
+        color: white;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .cart-content {
+      width: 100%;
+    }
+  }
+}
