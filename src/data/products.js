@@ -218,8 +218,7 @@ export const categories = [
   { id: 'hiking', name: 'Hiking' },
   { id: 'basketball', name: 'Basketball' },
   { id: 'walking', name: 'Walking' },
-  { id: 'formal', name: 'Formal' }
-];
+  { id: 'formal', name: 'Formal' } ];
 
 export const getProductById = (id) => {
   return products.find(product => product.id === parseInt(id));
